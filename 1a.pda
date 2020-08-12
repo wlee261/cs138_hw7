@@ -1,6 +1,6 @@
 start: S
-accepting: {F, S}
+accepting: {F}
 
 S (_, _ -> $, q1)
-q1 (a, _ -> a, q1) (b, a -> _, q2) (a, $ -> _, F) (b, $ -> _, F)
+q1 (a, _ -> a, q1) (b, a -> _, q2) (a, $ -> _, F) (_, a -> _, F) 
 q2 (b, a -> _, q2) (b, $ -> _, F) (_, a -> _, F)
